@@ -7,6 +7,7 @@ import SingleCountry from './components/singleCountry';
 
 import './styles/app.scss';
 import ScrollToTop from './components/scrollToTop';
+import Error from './components/Error';
 
 function App() {
   // JSX
@@ -17,9 +18,14 @@ function App() {
         <Route exact path='/'>
           <Body />
         </Route>
+
         <Route path='/countries/:countryName'>
           <ScrollToTop />
           <SingleCountry />
+        </Route>
+
+        <Route path='*'>
+          <Error />
         </Route>
       </Switch>
     </>

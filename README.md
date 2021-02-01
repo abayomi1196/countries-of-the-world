@@ -1,8 +1,6 @@
-This challenge was gotten from frontend mentor..(https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
- 
-It required me to integrate with the REST Countries API to pull country data and display it like in the designs.
+A Frontendmentor challenge (https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) that required me to integrate with the REST Countries API to pull country data and display it like in the designs.
 
-I used tHe React framework, and styled components for styling.
+I used the React framework, styled components & sass for styling.
 
 Features include: 
 See all countries from the API on the homepage, 

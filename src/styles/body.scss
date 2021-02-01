@@ -1,0 +1,133 @@
+@import './../styles/app.scss';
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+
+  section[data-role='search-container'] {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    box-shadow: 1px 1px 14px -6px rgba(0, 0, 0, 0.58);
+
+    @media (min-width: 45em) {
+      width: 400px;
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: none;
+      padding: 1em 1em 1em 4em;
+      border-radius: 10px;
+      font-size: 16px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1em;
+    }
+  }
+
+  section[data-role='regions-container'] {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    margin-top: 2em;
+    box-shadow: 1px 1px 14px -6px rgba(0, 0, 0, 0.58);
+
+    h4 {
+      margin: 0;
+      padding: 1em 4em 1em 1em;
+      font-weight: unset;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+
+      .regions-icon {
+        position: absolute;
+        right: 1em;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    ul {
+      display: none;
+      position: absolute;
+      top: 3em;
+      list-style: none;
+      width: 100%;
+      padding: 0;
+      border-radius: 10px;
+      box-shadow: 1px 1px 14px -6px rgba(0, 0, 0, 0.58);
+
+      li {
+        padding: 0.5em 1.3em;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+
+        &:hover {
+          font-size: 1.1rem;
+        }
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+    }
+
+    @media (min-width: 45em) {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 45em) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em 3em;
+  }
+
+  @media (min-width: 50em) {
+    padding: 2em 4em;
+  }
+}
+
+.countries-container {
+  min-height: 80vh;
+  padding: 2em;
+  display: grid;
+  align-items: flex-start;
+  grid-gap: 3em;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .country-text {
+    padding-left: 1em;
+    padding-bottom: 1em;
+  }
+
+  @media (min-width: 45em) {
+    padding: 1em 3em;
+  }
+
+  @media (min-width: 50em) {
+    padding: 1em 4em;
+  }
+}

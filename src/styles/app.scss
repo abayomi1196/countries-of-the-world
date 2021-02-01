@@ -1,0 +1,38 @@
+// Colors
+
+$dark-bg: hsl(207, 26%, 17%);
+$dark-elementBg: hsl(209, 23%, 22%);
+$dark-color: hsl(0, 0%, 100%);
+
+$light-bg: hsl(0, 0%, 98%);
+$light-elementBg: hsl(0, 0%, 100%);
+$light-color: hsl(200, 15%, 8%);
+
+.Light {
+  background-color: $light-elementBg;
+  color: $light-color;
+}
+
+.Dark {
+  background-color: $dark-elementBg;
+  color: $dark-color;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  height: 100vh;
+  font-weight: 600;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,124 @@
+.singleCountry {
+  padding: 2.5em;
+  min-height: calc(100vh - 60px);
+
+  .back-btn {
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 1.5em;
+    border: unset;
+    font-size: 16px;
+    margin: 0 0 2em;
+    box-shadow: 1px 1px 14px -6px rgba(0, 0, 0, 0.58);
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+    span {
+      margin-left: 1em;
+    }
+  }
+
+  .country-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto;
+
+    @media (min-width: 50em) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 2em 0;
+    }
+
+    .flag-container {
+      margin: 0 auto;
+
+      @media (min-width: 50em) {
+        margin: 0;
+        width: 40%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+
+        @media (min-width: 50em) {
+          height: 400px;
+        }
+      }
+    }
+
+    h2.name {
+      margin: 2em 0 0.5em;
+
+      @media (min-width: 50em) {
+        margin-top: 0;
+      }
+    }
+
+    .country-details-container {
+      .country-details {
+        &--info {
+          display: flex;
+          flex-direction: column;
+
+          &--second {
+            margin-top: 1.5em;
+
+            @media (min-width: 50em) {
+              margin-top: 0;
+              margin-left: 2em;
+            }
+          }
+
+          @media (min-width: 50em) {
+            flex-direction: row;
+          }
+        }
+
+        &--border {
+          strong {
+            display: inline-block;
+            margin-bottom: 0.8em;
+          }
+          .border-countries {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6em;
+
+            .border-country {
+              display: inline-block;
+              box-shadow: 1px 1px 14px -6px rgba(0, 0, 0, 0.58);
+              padding: 0.4em 0.6em;
+              transition: transform 0.2s ease-in-out;
+
+              &:hover {
+                transform: scale(1.05);
+              }
+            }
+          }
+        }
+      }
+      @media (min-width: 50em) {
+        margin: 0;
+        width: 50%;
+      }
+    }
+  }
+  @media (min-width: 45em) {
+    padding: 3em;
+  }
+
+  @media (min-width: 50em) {
+    padding: 4em;
+  }
+}
+
+a,
+a:hover,
+a:focus {
+  color: unset;
+}

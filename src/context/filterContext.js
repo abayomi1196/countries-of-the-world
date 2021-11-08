@@ -9,7 +9,7 @@ function FilterContextProvider({ children }) {
 
   // using useEffect to get the data from the API
   useEffect(() => {
-    fetch('https://restcountries.eu/rest/v2/all')
+    fetch('https://restcountries.com/v2/all')
       .then((res) => res.json())
       .then((data) => setCountries(data));
   }, []);

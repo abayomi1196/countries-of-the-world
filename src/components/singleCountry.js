@@ -1,17 +1,17 @@
-import '../styles/app.scss';
-import '../styles/singleCountry.scss';
-import React, { useContext } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { ThemeContext } from '../context/themeContext';
-import { filterContext } from '../context/filterContext';
+import "../styles/app.scss";
+import "../styles/singleCountry.scss";
+import React, { useContext } from "react";
+import { Link, useParams } from "react-router-dom";
+import { ThemeContext } from "../context/themeContext";
+import { filterContext } from "../context/filterContext";
 
-import { BiArrowBack } from 'react-icons/bi';
+import { BiArrowBack } from "react-icons/bi";
 
-import './../styles/app.scss';
+import "./../styles/app.scss";
 
 // Local light and dark mode style objects
-const darkStyle = { backgroundColor: 'hsl(207, 26%, 17%)' };
-const lightStyle = { backgroundColor: 'hsl(0, 0%, 98%)' };
+const darkStyle = { backgroundColor: "hsl(207, 26%, 17%)" };
+const lightStyle = { backgroundColor: "hsl(0, 0%, 98%)" };
 
 function SingleCountry() {
   const { countryName } = useParams();
@@ -24,7 +24,7 @@ function SingleCountry() {
   return (
     <main
       className={`${theme} singleCountry`}
-      style={theme === 'Dark' ? darkStyle : lightStyle}
+      style={theme === "Dark" ? darkStyle : lightStyle}
     >
       <Link to='/'>
         <button className={`${theme} back-btn`}>
@@ -73,11 +73,11 @@ function SingleCountry() {
                   </p>
                   <p>
                     <strong>Currencies: </strong>
-                    {country.currencies.map((curr) => curr.name).join(', ')}
+                    {country.currencies.map((curr) => curr.name).join(", ")}
                   </p>
                   <p>
                     <strong>Languages: </strong>
-                    {country.languages.map((lang) => lang.name).join(', ')}
+                    {country.languages.map((lang) => lang.name).join(", ")}
                   </p>
                 </div>
               </div>
@@ -86,7 +86,7 @@ function SingleCountry() {
                 <p>
                   <strong>Border Countries: </strong>
                   <span className='border-countries'>
-                    {country.borders.length
+                    {country.borders?.length
                       ? country.borders.map((border) => {
                           const country = countries.find(
                             (country) => country.alpha3Code === border
@@ -102,7 +102,7 @@ function SingleCountry() {
                             </Link>
                           );
                         })
-                      : 'None'}
+                      : "None"}
                   </span>
                 </p>
               </div>
@@ -110,7 +110,7 @@ function SingleCountry() {
           </div>
         </div>
       ) : (
-        <p style={{ margin: '0 auto' }}>
+        <p style={{ margin: "0 auto" }}>
           <em>Loading...</em>
         </p>
       )}
